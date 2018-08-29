@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body{
+      text-align: center;
+    }
+    #Json_parse{
+      width: 500px;
+      height: 300px;
+      resize:none;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    button{
+      outline: none;
+      display: block;
+      width: 60px;
+      height: 30px;
+      line-height: 28px;
+      background-color: rgba(0,0,0,0.2);
+      margin:30px auto;
+    }
+  </style>
+  <title>Json_parse</title>
+</head>
+<body>
+  <textarea name="Json_parse" id="Json_parse">{"date": "2014-04-23","name": "蘑菇街", "packageName": "com.mogujie","safe": [{"safeDes": "已通过安智市场官方认证，是正版软件"},{"safeDes": "已通过安智市场安全检测，请放心使用"},{"safeDes": "无任何形式的广告"}],"screen":["app/com.mogujie/screen0.jpg"],"size": 6746678}</textarea>
+  <button onclick='JSON_parse(document.querySelector("#Json_parse").value)'>解析</button>
+  <p>输出在控制台</p>
+  <script type="text/javascript" src="JSON_parse.js"></script>
+</body>
+</html>

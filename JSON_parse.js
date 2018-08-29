@@ -1,13 +1,34 @@
 function JSON_parse(json) {
 	for (let i = 0; i < json.length; i++) {
 		if (json[i] === " ") continue
-		if (json[i] === "[") return json_Array(json.slice(i + 1,json.length - 1))
-		if (json[i] === "{") return json_Object(json.slice(i + 1,json.length - 1))
-		if (json[i] === "t") return json_Boolean(json.slice(i,json.length),"true")
-		if (json[i] === "f") return json_Boolean(json.slice(i,json.length),"false")
-		if (json[i] === "n") return json_Boolean(json.slice(i,json.length),"null")
-		if (json[i] === '"') return json_String(json.slice(i + 1,json.length - 1))
-		if (/[0-9]/.test(json[i]) || json[i] === "-") return json_Number(json.slice(i,json.length))
+		if (json[i] === "[") {
+			console.log(json_Array(json.slice(i + 1,json.length - 1)))
+			return 
+		}
+		if (json[i] === "{") {
+			console.log(json_Object(json.slice(i + 1,json.length - 1)))
+			return 
+		}
+		if (json[i] === "t") {
+			console.log(json_Boolean(json.slice(i,json.length),"true"))
+			return 
+		}
+		if (json[i] === "f") {
+			console.log(json_Boolean(json.slice(i,json.length),"false"))
+			return 
+		}
+		if (json[i] === "n") {
+			console.log(json_Boolean(json.slice(i,json.length),"null"))
+			return 
+		}
+		if (json[i] === '"') {
+			console.log(json_String(json.slice(i + 1,json.length - 1)))
+			return 
+		}
+		if (/[0-9]/.test(json[i]) || json[i] === "-") {
+			console.log(json_Number(json.slice(i,json.length)))
+			return 
+		}
 		throw new Error("JSON解析异常")
 	}
 }
